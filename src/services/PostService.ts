@@ -16,7 +16,7 @@ export const postAPI = createApi({
             }),
             providesTags: result => ['News']
         }),
-        fetchOnePost: build.query<IPost, any>({
+        fetchOnePost: build.query<IPost, string|undefined>({
             query: (limit) => ({
                 url: `/news/${limit}`
             }),

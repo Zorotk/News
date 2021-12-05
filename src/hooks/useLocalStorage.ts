@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function useLocalStorage(key: any, initial?: " " | boolean) {
+export default function useLocalStorage(key: string, initial?: " " | boolean) {
     const [value, setvalue] = React.useState(() => {
         let getItem = localStorage.getItem(key)
         if (getItem) {
